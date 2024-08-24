@@ -9,7 +9,6 @@ import Foundation
 
 struct RecipeResponse: Codable {
     let recipes: [Recipe]
-
 }
 
 struct Recipe: Codable {

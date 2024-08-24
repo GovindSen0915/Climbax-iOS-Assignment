@@ -14,69 +14,56 @@ protocol RecipeViewModelDelegate: AnyObject {
     func didFailWithError(_ error: Error)
     func didStartLoading()
     func didFinishLoading()
-//    func didUpdateFavorites()
 }
 
 class RecipeViewModel {
     
     weak var delegate: RecipeViewModelDelegate?
-//
-//    private var products: [Recipe] = []
-//    private var currentPage = 1
-//    private var isFetchingData = false
-//
-//    var recipesCount: Int {
-//        return products.count
-//    }
-//
-//    func recipe(at index: Int) -> Recipe {
-//        return products[index]
-//    }
+    
     
     private var recipes: [Recipe] = []
-        private var favoriteRecipes: Set<Int> = [] // Track favorite recipe indices
-        private var currentPage = 1
-        private var isFetchingData = false
-        
-        var recipesCount: Int {
-            return recipes.count
-        }
+    private var favoriteRecipes: Set<Int> = [] // Track favorite recipe indices
+    private var currentPage = 1
+    private var isFetchingData = false
+    
+    var recipesCount: Int {
+        return recipes.count
+    }
     
     init() {
-            loadFavorites()
+        loadFavorites()
+    }
+    
+    func recipe(at index: Int) -> Recipe {
+        return recipes[index]
+    }
+    
+    func isFavorite(at index: Int) -> Bool {
+        return favoriteRecipes.contains(index)
+    }
+    
+    func toggleFavorite(at index: Int) {
+        if favoriteRecipes.contains(index) {
+            favoriteRecipes.remove(index)
+        } else {
+            favoriteRecipes.insert(index)
         }
-        
-        func recipe(at index: Int) -> Recipe {
-            return recipes[index]
-        }
-        
-        func isFavorite(at index: Int) -> Bool {
-            return favoriteRecipes.contains(index)
-        }
-        
-        func toggleFavorite(at index: Int) {
-            if favoriteRecipes.contains(index) {
-                favoriteRecipes.remove(index)
-            } else {
-                favoriteRecipes.insert(index)
-            }
-            saveFavorites()
-//            delegate?.didUpdateFavorites()
-        }
+        saveFavorites()
+    }
     
     private func saveFavorites() {
-           UserDefaults.standard.set(Array(favoriteRecipes), forKey: "FavoriteRecipes")
-       }
+        UserDefaults.standard.set(Array(favoriteRecipes), forKey: "FavoriteRecipes")
+    }
     
     func favoriteRecipesList() -> [Recipe] {
-            return favoriteRecipes.map { recipes[$0] }
+        return favoriteRecipes.map { recipes[$0] }
+    }
+    
+    private func loadFavorites() {
+        if let savedFavorites = UserDefaults.standard.array(forKey: "FavoriteRecipes") as? [Int] {
+            favoriteRecipes = Set(savedFavorites)
         }
-       
-       private func loadFavorites() {
-           if let savedFavorites = UserDefaults.standard.array(forKey: "FavoriteRecipes") as? [Int] {
-               favoriteRecipes = Set(savedFavorites)
-           }
-       }
+    }
     
     func fetchRecipes() {
         guard !isFetchingData else { return }

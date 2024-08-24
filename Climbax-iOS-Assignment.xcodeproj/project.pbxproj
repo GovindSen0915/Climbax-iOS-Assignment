@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		E82146BE2C7A0BA600B1AA44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82146BD2C7A0BA600B1AA44 /* AppDelegate.swift */; };
 		E82146C02C7A0BA600B1AA44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82146BF2C7A0BA600B1AA44 /* SceneDelegate.swift */; };
-		E82146C22C7A0BA600B1AA44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82146C12C7A0BA600B1AA44 /* ViewController.swift */; };
+		E82146C22C7A0BA600B1AA44 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82146C12C7A0BA600B1AA44 /* RecipeViewController.swift */; };
 		E82146C52C7A0BA600B1AA44 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E82146C42C7A0BA600B1AA44 /* Base */; };
 		E82146C72C7A0BA800B1AA44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82146C62C7A0BA800B1AA44 /* Assets.xcassets */; };
 		E82146CA2C7A0BA800B1AA44 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E82146C92C7A0BA800B1AA44 /* Base */; };
 		E82146D22C7A0BBA00B1AA44 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82146D12C7A0BBA00B1AA44 /* Model.swift */; };
 		E82146D72C7A0C2800B1AA44 /* productCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82146D62C7A0C2800B1AA44 /* productCell.xib */; };
-		E82146D82C7A0C2800B1AA44 /* productCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82146D52C7A0C2800B1AA44 /* productCell.swift */; };
+		E82146D82C7A0C2800B1AA44 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82146D52C7A0C2800B1AA44 /* RecipeCell.swift */; };
 		E82146DA2C7A0C5900B1AA44 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82146D92C7A0C5900B1AA44 /* RecipeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,13 +23,13 @@
 		E82146BA2C7A0BA600B1AA44 /* Climbax-iOS-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Climbax-iOS-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82146BD2C7A0BA600B1AA44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E82146BF2C7A0BA600B1AA44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E82146C12C7A0BA600B1AA44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E82146C12C7A0BA600B1AA44 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		E82146C42C7A0BA600B1AA44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E82146C62C7A0BA800B1AA44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E82146C92C7A0BA800B1AA44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E82146CB2C7A0BA800B1AA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E82146D12C7A0BBA00B1AA44 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		E82146D52C7A0C2800B1AA44 /* productCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productCell.swift; sourceTree = "<group>"; };
+		E82146D52C7A0C2800B1AA44 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		E82146D62C7A0C2800B1AA44 /* productCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = productCell.xib; sourceTree = "<group>"; };
 		E82146D92C7A0C5900B1AA44 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,14 +66,14 @@
 			children = (
 				E82146BD2C7A0BA600B1AA44 /* AppDelegate.swift */,
 				E82146BF2C7A0BA600B1AA44 /* SceneDelegate.swift */,
-				E82146C12C7A0BA600B1AA44 /* ViewController.swift */,
+				E82146C12C7A0BA600B1AA44 /* RecipeViewController.swift */,
 				E82146D92C7A0C5900B1AA44 /* RecipeViewModel.swift */,
 				E82146C32C7A0BA600B1AA44 /* Main.storyboard */,
 				E82146C62C7A0BA800B1AA44 /* Assets.xcassets */,
 				E82146C82C7A0BA800B1AA44 /* LaunchScreen.storyboard */,
 				E82146CB2C7A0BA800B1AA44 /* Info.plist */,
 				E82146D12C7A0BBA00B1AA44 /* Model.swift */,
-				E82146D52C7A0C2800B1AA44 /* productCell.swift */,
+				E82146D52C7A0C2800B1AA44 /* RecipeCell.swift */,
 				E82146D62C7A0C2800B1AA44 /* productCell.xib */,
 			);
 			path = "Climbax-iOS-Assignment";
@@ -151,9 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82146C22C7A0BA600B1AA44 /* ViewController.swift in Sources */,
+				E82146C22C7A0BA600B1AA44 /* RecipeViewController.swift in Sources */,
 				E82146BE2C7A0BA600B1AA44 /* AppDelegate.swift in Sources */,
-				E82146D82C7A0C2800B1AA44 /* productCell.swift in Sources */,
+				E82146D82C7A0C2800B1AA44 /* RecipeCell.swift in Sources */,
 				E82146C02C7A0BA600B1AA44 /* SceneDelegate.swift in Sources */,
 				E82146DA2C7A0C5900B1AA44 /* RecipeViewModel.swift in Sources */,
 				E82146D22C7A0BBA00B1AA44 /* Model.swift in Sources */,
