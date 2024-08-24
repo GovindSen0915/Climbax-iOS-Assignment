@@ -20,6 +20,7 @@ class RecipeCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        image1.layer.cornerRadius = 10
         favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
     }
     
