@@ -58,7 +58,7 @@ extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
             let task = URLSession.shared.dataTask(with: imageURL) { data, response, error in
                 if let data = data, let image = UIImage(data: data) {
                     DispatchQueue.main.async {
-                        cell.image1.image = image
+                        cell.recipeImageView.image = image
                     }
                 } else {
                     print("Failed to load image")
@@ -81,59 +81,9 @@ extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeCell else {
-    //            return UITableViewCell()
-    //        }
-    //        let product = viewModel.recipe(at: indexPath.row)
-    //        cell.titleLabel.text = product.name
-    //        cell.descriptionLabel.text = product.difficulty
-    //
-    //        if let imageURL = URL(string: product.image) {
-    //            let task = URLSession.shared.dataTask(with: imageURL) { data, response, error in
-    //                if let data = data, let image = UIImage(data: data) {
-    //                    DispatchQueue.main.async {
-    //                        cell.image1.image = image
-    //                    }
-    //                } else {
-    //                    print("Failed to load image")
-    //                }
-    //            }
-    //            task.resume()
-    //        } else {
-    //            print("Invalid image URL")
-    //        }
-    //
-    //        if indexPath.row == viewModel.recipesCount - 1 {
-    //            viewModel.fetchRecipes()
-    //        }
-    //
-    //        return cell
-    //    }
 }
 
-//extension ViewController: RecipeViewModelDelegate {
-//    func didReceiveData() {
-//        tableView.reloadData()
-//    }
-//
-//    func didFailWithError(_ error: Error) {
-//        print("Error: \(error.localizedDescription)")
-//    }
-//
-//    func didStartLoading() {
-//        activityIndicator.startAnimating()
-//    }
-//
-//    func didFinishLoading() {
-//        activityIndicator.stopAnimating()
-//    }
-//}
-
-
 extension RecipeViewController: RecipeViewModelDelegate {
-    
-    
     
     func didReceiveData() {
         tableView.reloadData()

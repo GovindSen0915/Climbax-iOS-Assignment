@@ -87,8 +87,8 @@
             <connections>
                 <outlet property="descriptionLabel" destination="qY4-yt-U5S" id="fXN-p9-t0P"/>
                 <outlet property="favoriteButton" destination="ZzQ-gy-B8P" id="1kX-05-Tgb"/>
-                <outlet property="image1" destination="b33-zv-gjt" id="ySD-s8-ycG"/>
                 <outlet property="rating" destination="L7v-wN-xjh" id="InT-yf-TiO"/>
+                <outlet property="recipeImageView" destination="b33-zv-gjt" id="ySD-s8-ycG"/>
                 <outlet property="titleLabel" destination="Xd1-Nx-tP5" id="7R3-1O-Oxv"/>
             </connections>
             <point key="canvasLocation" x="135.1145038167939" y="17.605633802816904"/>

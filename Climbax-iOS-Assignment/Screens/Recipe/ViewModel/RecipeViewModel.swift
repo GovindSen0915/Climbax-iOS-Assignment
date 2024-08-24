@@ -22,7 +22,7 @@ class RecipeViewModel {
     
     
     private var recipes: [Recipe] = []
-    private var favoriteRecipes: Set<Int> = [] // Track favorite recipe indices
+    private var favoriteRecipes: Set<Int> = []
     private var currentPage = 1
     private var isFetchingData = false
     

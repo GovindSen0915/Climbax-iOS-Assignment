@@ -10,7 +10,7 @@ import UIKit
 
 class RecipeCell: UITableViewCell {
     
-    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
@@ -20,7 +20,7 @@ class RecipeCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        image1.layer.cornerRadius = 10
+        recipeImageView.layer.cornerRadius = 10
         favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
     }
     
