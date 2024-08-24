@@ -1,5 +1,5 @@
 //
-//  productCell.swift
+//  RecipeCell.swift
 //  Climbax-iOS-Assignment
 //
 //  Created by Govind Sen on 24/08/24.
@@ -31,7 +31,6 @@ class RecipeCell: UITableViewCell {
         titleLabel.text = recipe.name
         descriptionLabel.text = recipe.cuisine
         rating.text = String(recipe.rating)
-        // The favoriteButton image is now set in ViewController's cellForRowAt method
     }
     
 }

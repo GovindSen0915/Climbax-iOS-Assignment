@@ -25,7 +25,7 @@ class RecipeViewController: UIViewController {
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "productCell", bundle: nil), forCellReuseIdentifier: "productCell")
+        tableView.register(UINib(nibName: "RecipeCell", bundle: nil), forCellReuseIdentifier: "RecipeCell")
     }
     
     func setupLoadingIndicator() {
@@ -46,7 +46,7 @@ extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as? RecipeCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeCell else {
             return UITableViewCell()
         }
         
@@ -82,7 +82,7 @@ extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        guard let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as? productCell else {
+    //        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeCell else {
     //            return UITableViewCell()
     //        }
     //        let product = viewModel.recipe(at: indexPath.row)
